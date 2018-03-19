@@ -16,8 +16,6 @@ public class UserAction extends ActionSupport{
 		this.user = user;
 	}
 
-
-
 	public String login() {
 		System.out.println(user.getUserName());
 		return SUCCESS;

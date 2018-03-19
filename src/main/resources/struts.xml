@@ -20,7 +20,6 @@
 	-->
 	<!-- 开发模式 -->
 	<constant name="struts.devMode" value="true" />
-	
     <package name="actions" namespace="/" extends="struts-default">
         <action name="*_*" class="cn.hwtblog.action.{1}Action" method="{2}">
             <result>/{1}_{2}_success.jsp</result>
