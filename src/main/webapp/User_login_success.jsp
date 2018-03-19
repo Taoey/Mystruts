@@ -1,3 +1,4 @@
+<%@page import="cn.hwtblog.domain.User"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%
@@ -13,6 +14,10 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 		<title>Insert title here</title>
 	</head>
 	<body>
-		login success!!!
+		<label>login success!!!</label><br>
+		<%
+		User viewUser = (User) request.getAttribute("user");
+		%>
+		<label><%=viewUser.getUserName() %></label>
 	</body>
 </html>
