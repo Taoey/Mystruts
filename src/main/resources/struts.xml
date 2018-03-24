@@ -21,11 +21,21 @@
 	<!-- 开发模式 -->
 	<constant name="struts.devMode" value="true" />
     <package name="actions" namespace="/" extends="struts-default">
+        <!-- 访问WEB-INF下文件 -->
+        <action name="fileUpload">
+        	<result>/WEB-INF/FileUpLoad.jsp</result>
+        </action>
+        <!-- 通配 -->
         <action name="*_*" class="cn.hwtblog.action.{1}Action" method="{2}">
             <result>/{1}_{2}_success.jsp</result>
         </action>
-    </package>	
-	
+    </package>
+
+	<package name="file" namespace="/file" extends="struts-default">
+		<action name="File_*" class="cn.hwtblog.action.FileAction" method="{1}">
+			<result>/File_success.jsp</result>
+		</action>
+	</package>
     <!-- Add packages here -->
 
 </struts>

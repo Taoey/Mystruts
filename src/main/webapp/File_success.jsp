@@ -13,9 +13,6 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 		<title>Insert title here</title>
 	</head>
 	<body>
-		<ul>
-			<li><a href="login.jsp">login</a></li>
-			<li><a href="fileUpload">fileUpload</a></li>
-		</ul>
+		file one success
 	</body>
 </html>

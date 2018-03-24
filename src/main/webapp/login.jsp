@@ -13,7 +13,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 		<title>Insert title here</title>
 	</head>
 	<body>
-		<form action="User_login" method="post">
+		<form action="User_login.action" method="post">
 			<input type="input" name="user.userName">
 			<input type="submit" value="提交">
 		</form>
