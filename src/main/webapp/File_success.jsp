@@ -15,6 +15,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 	<body>
 		file  success<br>	
 		描述：${fileName}<br>
+		错误信息：${fieldErrors.fileError[0]}<br>
 		图片上传结果：	<br>		
 		<img alt="头像" src="upLoadFiles/${upFileFileName}"><br>
 		<s:debug></s:debug>

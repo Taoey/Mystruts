@@ -13,6 +13,22 @@ public class FileAction extends ActionSupport {
 	private String upFileFileName; // 封装上传文件属性
 	private String upFileContentType;     // 封装上传文件类型的属性
 	public String oneUp() throws IOException {
+		
+		String endName  = upFileFileName.substring(upFileFileName.lastIndexOf("."));
+		String [] partternName = {".jpg",".png",".gif"};
+		
+		boolean fileNamePass = false;
+		
+		for (String i : partternName) {
+			if(i.equals(endName)) {
+				fileNamePass = true;
+				break;
+			}
+		}
+		
+		if(!fileNamePass) {
+			this.addFieldError("fileError", "文件名错误");
+		}
         // 上传文件的保存位置在“/image”,该位置在tomcat服务器的“webapps”之中
         String  realpath= ServletActionContext.getServletContext().getRealPath("/upLoadFiles");
         File file = new File(realpath);
