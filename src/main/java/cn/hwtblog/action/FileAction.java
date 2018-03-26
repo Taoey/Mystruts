@@ -19,7 +19,7 @@ public class FileAction extends ActionSupport {
         if(!file.exists())file.mkdirs();
 
         // 实现文件上传，也就是做了一个方法调用～
-        FileUtils.copyFile(upFile,new File(file,fileName+"_"+upFileFileName));
+        FileUtils.copyFile(upFile,new File(file,upFileFileName));
         return SUCCESS;
 	}
 	public String getFileName() {

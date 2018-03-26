@@ -19,14 +19,11 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 		         <input type="submit" value="上传">
 		</form> -->
 		
-    <s:form action="file/File_oneUp.action" method="post"  enctype="multipart/form-data">
-        文件名：<s:textfield name="fileName"/><br>
-        文件：<s:file name="upFile"/><br>
-        <s:submit value="提交"/>
-　　　　
-　　　　　<s:fielderror/>
-　　　　
-    </s:form>		
+    <form action="file/File_oneUp.action" method="post"  enctype="multipart/form-data">
+        文件名：<input type="text" name="fileName"/><br>
+        文件：<input type="file" name="upFile"/><br>
+        <input type="submit" value="提交"/>
+    </form>		
 		
 		
 		
